@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Defines the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+  <title>Elder Health Assessment - Test</title> <!-- Page title -->
+  <link rel="stylesheet" href="style.css"> <!-- Link to the stylesheet -->
+</head>
+<body>
+  <header>
+    <h1>Elder Health Assessment</h1> <!-- Page header -->
+  </header>
+  <main>
+    <!-- TUGT Section: Numeric input for the timed test -->
+    <section id="tugt-section">
+      <h2>Timed Up and Go Test (TUGT)</h2> <!-- Section title -->
+      <p>Please perform the TUG test and enter the time (in seconds) it took you to complete the test.</p>
+      <input type="number" id="tugtTime" placeholder="Enter time in seconds">
+      <!-- Numeric input field for TUGT time -->
+    </section>
+    
+    <!-- GDS Section: Qualitative questions using radio buttons -->
+    <section id="gds-section">
+      <h2>Geriatric Depression Scale (GDS) Assessment</h2>
+      <p>Please answer the following questions:</p>
+      <form id="gdsForm">
+        <div class="question">
+          <p>1. Do you feel that your life is empty?</p>
+          <label><input type="radio" name="q1" value="yes" required> Yes</label>
+          <label><input type="radio" name="q1" value="no"> No</label>
+        </div>
+        <div class="question">
+          <p>2. Do you often feel helpless?</p>
+          <label><input type="radio" name="q2" value="yes" required> Yes</label>
+          <label><input type="radio" name="q2" value="no"> No</label>
+        </div>
+        <div class="question">
+          <p>3. Are you satisfied with your life?</p>
+          <label><input type="radio" name="q3" value="yes" required> Yes</label>
+          <label><input type="radio" name="q3" value="no"> No</label>
+        </div>
+        <div class="question">
+          <p>4. Do you feel full of energy?</p>
+          <label><input type="radio" name="q4" value="yes" required> Yes</label>
+          <label><input type="radio" name="q4" value="no"> No</label>
+        </div>
+        <div class="question">
+          <p>5. Do you find it difficult to enjoy life?</p>
+          <label><input type="radio" name="q5" value="yes" required> Yes</label>
+          <label><input type="radio" name="q5" value="no"> No</label>
+        </div>
+      </form>
+    </section>
+    
+    <!-- Additional comments for extra qualitative feedback -->
+    <section id="additional-comments">
+      <h2>Additional Comments</h2>
+      <p>Please provide any additional comments about your health or mood:</p>
+      <textarea id="comments" rows="4" cols="50" placeholder="Your comments here..."></textarea>
+    </section>
+    
+    <!-- Button to submit the entire assessment -->
+    <button onclick="submitAssessment()">Submit Assessment</button>
+  </main>
+  
+  <script src="js/assessment.js"></script> <!-- Include the custom JavaScript file that processes the assessment -->
+</body>
+</html>
